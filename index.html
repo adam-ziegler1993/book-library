@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Book Library</a>
+          </div>
+        </nav>
+      </header>
+
+    <main id="main-content" class="container">
+        <section id="welcome" class="text-center">
+            <h1>Welcome to the Online Library</h1>
+            <p>Be sure to sign in by putting your first name below.</p>
+            <div id="ask-name" class="mt-4">
+                <h2>What's your first name?</h2>
+                <input type="text" id="first-name" class="form-control mx-auto">
+                <button type="submit" id="submit-first-name" class="btn btn-primary mt-3">Submit</button>
+            </div>
+            <div id="hidden-component" class="mt-4" style="display: none;">
+                <h3>Hey <span id="display-name"></span>, we're glad you're here.</h3>
+                <p>Fill out the form below completely for each Book.</p>
+            </div>
+        </section>
+
+        <section id="library" class="mt-5">
+            <form action="POST" class="text-center" id="book">
+                <input type="text" name="title" id="title" placeholder="Title of the Book" class="form-control mx-auto">
+                <input type="text" name="author" id="author" placeholder="Author of the Book" class="form-control mx-auto mt-3">
+                <input type="number" name="page-count" id="page-count" placeholder="How many pages does it contain?" class="form-control mx-auto mt-3">
+                <textarea name="book-summary" id="book-summary" placeholder="Write a 2-3 sentence summary about the book." class="form-control mx-auto mt-3"></textarea>
+                <button type="submit" id="submit-book" class="btn btn-primary mt-3">Submit Book</button>
+            </form>
+        </section>
+
+        <section id="book-storage">
+            <table class="table table-striped">
+                <tr>
+                    <td>Title</td>
+                    <td>Author</td>
+                    <td>Pages</td>
+                    <td>Summary</td>
+                </tr>
+            </table>
+        </section>
+        
+
+        <section id="book-stats" class="text-center mt-5">
+            <div>
+                <p>Total books: <span id="total-books">0</span></p>
+                <p>Total pages: <span id="total-pages">0</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+          <p class="mb-0">Made by Adam Ziegler</p>
+          <p class="mb-0">Follow me on:
+            <a href="#" class="text-white ms-2">Twitter</a> |
+            <a href="#" class="text-white ms-2">LinkedIn</a> |
+            <a href="#" class="text-white ms-2">Personal Page</a>
+          </p>
+        </div>
+      </footer>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
